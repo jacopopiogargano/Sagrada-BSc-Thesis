@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolcard>
+    <title>Cork-backed Straightedge</title>
+    <imageURL>images/ToolCards/Cork-backedStraightedge.jpg</imageURL>
+    <description>After drafting, place the die in a spot that is not adjacent to another die. \n
+        You must obey all other placement restrictions.</description>
+    <neededTokens>1</neededTokens>
+    <tokensUsageMultiplier>2</tokensUsageMultiplier>
+    <placementRule decoratorName="AdjacentValuePlacementRuleDecorator"/>
+    <placementRule decoratorName="NotAdjacentDicePlacementRuleDecorator"/>
+    <placementRule decoratorName="AdjacentColorPlacementRuleDecorator"/>
+    <placementRule decoratorName="ColorPlacementRuleDecorator"/>
+    <placementRule decoratorName="ValuePlacementRuleDecorator"/>
+    <controllerStateRule prevState="StartControllerState" nextState="DraftControllerState" />
+    <controllerStateRule prevState="DraftControllerState" nextState="PlaceControllerState" />
+    <controllerStateRule prevState="PlaceControllerState" nextState="EndControllerState" />
+</toolcard>

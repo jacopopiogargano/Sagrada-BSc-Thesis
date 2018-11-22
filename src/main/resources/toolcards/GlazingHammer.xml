@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolcard>
+    <title>Glazing Hammer</title>
+    <imageURL>images/ToolCards/GlazingHammer.jpg</imageURL>
+    <description>Re-roll all in dice in the Draft Pool. This may only be used on your second turn before drafting.</description>
+    <neededTokens>1</neededTokens>
+    <tokensUsageMultiplier>2</tokensUsageMultiplier>
+    <controllerStateRule prevState="StartControllerState" nextState="RerollDraftPoolControllerState" />
+    <controllerStateRule prevState="ToolCardControllerState" nextState="RerollDraftPoolControllerState" />
+    <controllerStateRule prevState="RerollDraftPoolControllerState" nextState="EndToolCardEffectControllerState" />
+</toolcard>

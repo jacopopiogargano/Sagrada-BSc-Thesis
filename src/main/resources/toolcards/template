@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolcard>
+    <title></title>
+    <imageURL></imageURL>
+    <description></description>
+    <neededTokens></neededTokens>
+    <tokensUsageMultiplier></tokensUsageMultiplier>
+    <placementRule decoratorName="" />
+    <controllerStateRule prevState="" nextState="" />
+</toolcard>

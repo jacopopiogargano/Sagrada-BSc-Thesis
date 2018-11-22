@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolcard>
+    <title>Eglomise Brush</title>
+    <imageURL>images/ToolCards/EglomiseBrush.jpg</imageURL>
+    <description>Move any one die in your window, ignoring the color restrictions./n
+        You must obey all other placement restrictions</description>
+    <neededTokens>1</neededTokens>
+    <tokensUsageMultiplier>2</tokensUsageMultiplier>
+    <placementRule decoratorName="AdjacentDicePlacementRuleDecorator"/>
+    <placementRule decoratorName="AdjacentValuePlacementRuleDecorator"/>
+    <placementRule decoratorName="AdjacentColorPlacementRuleDecorator"/>
+    <placementRule decoratorName="ValuePlacementRuleDecorator"/>
+    <controllerStateRule prevState="StartControllerState" nextState="MoveControllerState" />
+    <controllerStateRule prevState="ToolCardControllerState" nextState="MoveControllerState" />
+    <controllerStateRule prevState="MoveControllerState" nextState="EndToolCardEffectControllerState" />
+</toolcard>

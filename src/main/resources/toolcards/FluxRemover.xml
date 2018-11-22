@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolcard>
+    <title>Flux Remover</title>
+    <imageURL>images/ToolCards/FluxRemover.jpg</imageURL>
+    <description>After drafting, return the die to the Dice Bag and pull 1 die from the bag. \n
+        Choose a value and place the new die, obeying all placement restrictions, or return it to the Draft Pool.</description>
+    <neededTokens>1</neededTokens>
+    <tokensUsageMultiplier>2</tokensUsageMultiplier>
+    <controllerStateRule prevState="StartControllerState" nextState="DraftControllerState" />
+    <controllerStateRule prevState="DraftControllerState" nextState="SwitchDraftedWithBagControllerState" />
+    <controllerStateRule prevState="SwitchDraftedWithBagControllerState" nextState="ChangeDiceValueControllerState" />
+    <controllerStateRule prevState="ChangeDiceValueControllerState" nextState="PlaceControllerState" />
+    <controllerStateRule prevState="PlaceControllerState" nextState="EndControllerState" />
+</toolcard>

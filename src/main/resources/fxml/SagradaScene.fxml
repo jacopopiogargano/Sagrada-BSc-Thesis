@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polimi.se2018.view.SagradaSceneController">
+   <children>
+      <HBox fx:id="backPaneBox" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+      <GridPane alignment="CENTER" prefHeight="385.0" prefWidth="589.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="348.0" minWidth="10.0" prefWidth="297.0" />
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="292.0" minWidth="10.0" prefWidth="292.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="292.0" minWidth="10.0" prefWidth="292.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="292.0" minWidth="10.0" prefWidth="292.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="292.0" minWidth="10.0" prefWidth="292.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="292.0" minWidth="10.0" prefWidth="292.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" percentHeight="28.0" prefHeight="104.0" valignment="TOP" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" percentHeight="28.0" prefHeight="126.0" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="60.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" percentHeight="22.0" prefHeight="80.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <HBox fx:id="windowPatternsBox" alignment="CENTER" prefHeight="178.0" prefWidth="542.0" spacing="10.0" GridPane.columnSpan="6" GridPane.rowSpan="2" />
+            <GridPane fx:id="cardsCarouselGridPane" alignment="CENTER" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="10.0" valignment="CENTER" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" percentHeight="80.0" valignment="CENTER" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" percentHeight="10.0" valignment="CENTER" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <GridPane fx:id="cardCaouselCardsButtonsPane" GridPane.columnSpan="3">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" minWidth="10.0" percentWidth="33.3" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="33.4" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" percentWidth="33.3" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="cardsCarouselToolCardsButton" mnemonicParsing="false" onAction="#onCardCarouselToolCardsButtonPressed" text="Toolcards" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cardsCarouselPublicsButton" mnemonicParsing="false" onAction="#onCardCarouselPublicsButtonPressed" text="Public" textAlignment="CENTER" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cardsCarouselPrivateButton" mnemonicParsing="false" onAction="#onCardCarouselPrivateButtonPressed" text="Private" textAlignment="CENTER" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </GridPane>
+                  <GridPane GridPane.columnSpan="3" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" percentWidth="40.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="20.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" percentWidth="40.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                    </rowConstraints>
+                     <children>
+                        <HBox fx:id="cardsCarouselPreviousHBox" alignment="CENTER_RIGHT" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Pane fx:id="cardsCarouselPreviousPane">
+                                 <children>
+                                    <ImageView fx:id="cardsCarouselPreviousImageView" fitHeight="35.0" fitWidth="64.0" nodeOrientation="INHERIT" onMouseClicked="#handleCardCarouselPrevious" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="cardsCarouselNextHBox" alignment="CENTER_LEFT" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <children>
+                              <Pane fx:id="cardsCarouselNextPane">
+                                 <children>
+                                    <ImageView fx:id="cardsCarouselNextImageView" fitHeight="35.0" fitWidth="64.0" nodeOrientation="INHERIT" onMouseClicked="#handleCardCarouselNext" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <StackPane fx:id="cardsCarouselFavorTokensStackPane" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane>
+                                       <children>
+                                          <ImageView fx:id="cardsCarouselFavorTokensImageView" fitHeight="28.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                 <center>
+                                    <Label fx:id="cardsCarouselFavorTokensValue" alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="64.0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </StackPane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" />
+                     </GridPane.margin>
+                  </GridPane>
+                   <HBox fx:id="cardsCarouselCardHBox" alignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                   <!--<HBox fx:id="cardsCarouselCardHBox" alignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">-->
+                     <children>
+                        <Pane fx:id="cardsCarouselCardPane">
+                           <children>
+                              <ImageView fx:id="cardsCarouselCardImageView" fitHeight="112.0" fitWidth="192.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </children></Pane>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </HBox>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </GridPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: black;" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <content>
+                  <TextArea fx:id="playerTerminal" editable="false" prefHeight="200.0" prefWidth="200.0" text="Welcome to Sagrada." wrapText="true" />
+               </content>
+            </ScrollPane>
+            <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="trackButton" mnemonicParsing="false" onAction="#handleTrackButtonPressedEvent" prefHeight="20.0" prefWidth="80.0" text="Track" />
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#handleExitEvent" prefHeight="20.0" prefWidth="80.0" style="-fx-background-color: indianred;" text="Quit" />
+               </children></VBox>
+            <FlowPane fx:id="dynamicChoicesPane" alignment="CENTER" columnHalignment="CENTER" hgap="5.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0" GridPane.rowIndex="2" />
+            <VBox GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+               <children>
+                  <FlowPane fx:id="draftPoolPane" alignment="TOP_CENTER" columnHalignment="CENTER" hgap="5.0" prefHeight="103.0" prefWidth="99.0" rowValignment="TOP" vgap="10.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </FlowPane>
+                  <HBox fx:id="currentDraftedPane" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label text="Choose value:" />
+                        <ChoiceBox fx:id="diceValuePicker" prefWidth="66.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <ScrollPane fx:id="historyScrollPane" hbarPolicy="NEVER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <content>
+                  <TextArea fx:id="historyTerminal" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+               </content>
+            </ScrollPane>
+
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <AnchorPane fx:id="blackAnchorPane" opacity="0.0" style="-fx-background-color: rgba(0, 0, 0, 0.8);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane fx:id="trackGridPane" alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="30.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="65.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="5.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="8.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="ALWAYS" />
+                <RowConstraints percentHeight="4.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+               <children>
+                  <HBox fx:id="trackHBox" alignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="12" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="trackImageButton" mnemonicParsing="false" prefHeight="420.0" prefWidth="175.0" text="Button" />
+                     </children>
+                  </HBox>
+                   <HBox fx:id="trackHBox10" layoutX="10.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.vgrow="NEVER">
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <padding>
+                           <Insets bottom="10.0" top="10.0" />
+                       </padding>
+                   </HBox>
+                   <HBox fx:id="trackHBox9" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <padding>
+                           <Insets bottom="10.0" top="10.0" />
+                       </padding>
+                   </HBox>
+                   <HBox fx:id="trackHBox8" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <padding>
+                           <Insets bottom="10.0" top="10.0" />
+                       </padding>
+                   </HBox>
+                   <HBox fx:id="trackHBox7" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <padding>
+                           <Insets bottom="10.0" top="10.0" />
+                       </padding>
+                   </HBox>
+                   <HBox fx:id="trackHBox6" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <padding>
+                           <Insets bottom="10.0" top="10.0" />
+                       </padding>
+                   </HBox>
+                   <HBox fx:id="trackHBox5" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <padding>
+                           <Insets bottom="10.0" top="10.0" />
+                       </padding>
+                   </HBox>
+                  <HBox fx:id="trackHBox4" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                   <HBox fx:id="trackHBox3" layoutX="130.0" layoutY="38.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="8">
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <padding>
+                           <Insets bottom="10.0" top="10.0" />
+                       </padding>
+                   </HBox>
+                   <HBox fx:id="trackHBox2" layoutX="130.0" layoutY="38.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9">
+                       <opaqueInsets>
+                           <Insets />
+                       </opaqueInsets>
+                       <padding>
+                           <Insets bottom="10.0" top="10.0" />
+                       </padding>
+                   </HBox>
+                  <HBox fx:id="trackHBox1" layoutX="130.0" layoutY="324.0" prefHeight="100.0" prefWidth="200.0" spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <Button fx:id="trackBackButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onTrackBackButtonPressed" text="BACK" textAlignment="CENTER" textFill="#ff0707" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <GridPane fx:id="toolCardsGridPane" alignment="CENTER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="75.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" percentHeight="15.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="toolCards1Button" mnemonicParsing="false" onAction="#onToolCards1ButtonPressed" opacity="0.0" prefHeight="318.0" prefWidth="225.0" GridPane.columnIndex="1" />
+                  <Button fx:id="toolCards2Button" mnemonicParsing="false" onAction="#onToolCards2ButtonPressed" opacity="0.0" prefHeight="318.0" prefWidth="225.0" GridPane.columnIndex="2" />
+                  <Button fx:id="toolCards3Button" mnemonicParsing="false" onAction="#onToolCards3ButtonPressed" opacity="0.0" prefHeight="318.0" prefWidth="225.0" GridPane.columnIndex="3" />
+                  <Button fx:id="toolCards1FavorTokensButton" mnemonicParsing="false" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="toolCards2FavorTokensButton" mnemonicParsing="false" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="toolCards3FavorTokensButton" mnemonicParsing="false" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <HBox fx:id="toolCardsPlayerHBox" alignment="CENTER" opacity="0.0" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="You have" textAlignment="CENTER" textFill="#eb1b1b">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button fx:id="toolCardsPlayerFavorTokensButton" mnemonicParsing="false" textAlignment="CENTER">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="toolCardsBackButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onToolCardsBackButtonPressed" text="BACK" textAlignment="CENTER" textFill="#ff0707" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <VBox fx:id="windowPatternsVBox" alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox fx:id="windowPatternsHBox" alignment="CENTER" opacity="0.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <HBox fx:id="windowPatterns1ImageBox" alignment="BOTTOM_CENTER" VBox.vgrow="NEVER">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Button fx:id="windowPatterns1FavorTokens" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox fx:id="windowPatterns2ImageBox" alignment="BOTTOM_CENTER" VBox.vgrow="NEVER">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Button fx:id="windowPatterns2FavorTokens" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox fx:id="windowPatterns3ImageBox" alignment="BOTTOM_CENTER" VBox.vgrow="NEVER">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Button fx:id="windowPatterns3FavorTokens" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox fx:id="windowPatterns4ImageBox" alignment="BOTTOM_CENTER" VBox.vgrow="NEVER">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Button fx:id="windowPatterns4FavorTokens" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="windowPatternsPrivateObjectiveCardImage" alignment="CENTER" mnemonicParsing="false" prefHeight="179.0" prefWidth="151.0" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

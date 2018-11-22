@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolcard>
+    <title>Running Pliers</title>
+    <imageURL>images/ToolCards/RunningPliers.jpg</imageURL>
+    <description>After your first turn, immediately draft a dice. \n
+        Skip your next turn this round.</description>
+    <neededTokens>1</neededTokens>
+    <tokensUsageMultiplier>2</tokensUsageMultiplier>
+    <controllerStateRule prevState="ToolCardControllerState" nextState="SkipNextTurnControllerState" />
+    <controllerStateRule prevState="SkipNextTurnControllerState" nextState="DraftControllerState" />
+    <controllerStateRule prevState="DraftControllerState" nextState="PlaceControllerState" />
+    <controllerStateRule prevState="PlaceControllerState" nextState="EndControllerState" />
+</toolcard>

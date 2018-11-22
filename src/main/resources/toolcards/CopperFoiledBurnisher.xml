@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolcard>
+    <title>Copper Foiled Burnisher</title>
+    <imageURL>images/ToolCards/CopperFoiledBurnisher.jpg</imageURL>
+    <description>Move any one die in your window ignoring shade restriction. \n
+    You must obey all other placement restrictions.</description>
+    <neededTokens>1</neededTokens>
+    <tokensUsageMultiplier>2</tokensUsageMultiplier>
+    <placementRule decoratorName="AdjacentDicePlacementRuleDecorator"/>
+    <placementRule decoratorName="AdjacentColorPlacementRuleDecorator"/>
+    <placementRule decoratorName="AdjacentValuePlacementRuleDecorator"/>
+    <placementRule decoratorName="ColorPlacementRuleDecorator"/>
+    <controllerStateRule prevState="StartControllerState" nextState="MoveControllerState" />
+    <controllerStateRule prevState="ToolCardControllerState" nextState="MoveControllerState" />
+    <controllerStateRule prevState="MoveControllerState" nextState="EndToolCardEffectControllerState" />
+</toolcard>

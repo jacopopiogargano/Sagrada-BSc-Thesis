@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolcard>
+    <title>Lens Cutter</title>
+    <imageURL>images/ToolCards/LensCutter.jpg</imageURL>
+    <description>After drafting, swap the drafted die with a die from the Round Track.</description>
+    <neededTokens>1</neededTokens>
+    <tokensUsageMultiplier>2</tokensUsageMultiplier>
+    <controllerStateRule prevState="StartControllerState" nextState="DraftControllerState" />
+    <controllerStateRule prevState="DraftControllerState" nextState="ChooseFromTrackControllerState" />
+    <controllerStateRule prevState="ChooseFromTrackControllerState" nextState="SwapDraftedWithTrackControllerState" />
+    <controllerStateRule prevState="SwapDraftedWithTrackControllerState" nextState="PlaceControllerState" />
+    <controllerStateRule prevState="PlaceControllerState" nextState="EndControllerState" />
+</toolcard>

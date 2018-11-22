@@ -1,0 +1,10 @@
+numberOfRounds=10
+maxNumberOfPlayers=4
+minNumberOfPlayers=2
+numberOfDicesPerColor=18
+numberOfToolCards=3
+numberOfPublicObjectiveCards=3
+timeoutLaunchingGame=40
+timeoutChoosingPatterns=40
+timeoutPlayerMove=120
+amountOfCouplesOfPatternsPerPlayer=2
